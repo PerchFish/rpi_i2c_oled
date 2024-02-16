@@ -127,7 +127,7 @@ sudo apt-get install python3-dev python3-smbus python3-pil
 
 Checkout this code
 ```
-git clone git@github.com:crismc/rpi_i2c_oled.git
+git clone git@github.com:perchfish/rpi_i2c_oled.git
 cd rpi_i2c_oled
 ```
 
