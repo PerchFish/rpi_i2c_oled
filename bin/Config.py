@@ -14,7 +14,8 @@ class Config:
         'storage',
         'memory',
         'cpu',
-        'static'
+        'static',
+	'watchlogstate'
     ]
     HASSIO_DEPENDENT_SCREENS = [
         'Splash'

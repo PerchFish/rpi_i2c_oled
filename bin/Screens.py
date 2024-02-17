@@ -377,3 +377,25 @@ class CpuScreen(BaseScreen):
         
         self.display.show()
         time.sleep(self.duration)
+
+class WatchlogstateScreen(BaseScreen):
+    img = Image.open(r"" + Utils.current_dir + "/img/cpu-64-bit.png")
+
+    def render(self):
+        state = Utils.shell_cmd("top -bn1 | grep Load | awk '{printf \"%.2f\", $(NF-2)}'")
+        img = Utils.shell_cmd("uptime | grep -ohe 'up .*' | sed 's/,//g' | awk '{ print $2" "$3 }'") #"tail ~/vn/visual_aim/test/va-app/log/log.log"
+        coordinates = Utils.shell_cmd("uptime | grep -ohe 'up .*' | sed 's/,//g' | awk '{ print $2" "$3 }'")
+
+        # Resize and merge icon to Canvas
+        icon = self.img.resize([26,26])
+        self.display.image.paste(icon,(-2,3))
+
+        self.display.draw.text((29, 0), 'STATE: ' + state, font=self.font(8), fill=255)
+        self.display.draw.text((29, 11), 'Images: '+ img, font=self.font(8), fill=255)  
+        self.display.draw.text((29, 21), 'GPS: '+ coordinates, font=self.font(8), fill=255)
+        
+
+        self.capture_screenshot()
+        
+        self.display.show()
+        time.sleep(self.duration)

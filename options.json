@@ -7,7 +7,7 @@
     "graceful_exit_text": "Exited at {datetime}",
     "Scroll_Amplitude": 6,
 
-    "Show_Welcome_Screen": true,
+    "Show_Welcome_Screen": false,
     "Welcome_Screen_Limit": 5,
     "Welcome_Screen_Duration": null,
     "Welcome_Screen_Text": "Welcome to {hostname}",
@@ -16,15 +16,15 @@
     "Splash_Screen_Limit": null,
     "Splash_Screen_Duration": null,
     
-    "Show_Memory_Screen": true,
+    "Show_Memory_Screen": false,
     "Memory_Screen_Limit": null,
     "Memory_Screen_Duration": 10,
 
-    "Show_Storage_Screen": true,
+    "Show_Storage_Screen": false,
     "Storage_Screen_Limit": null,
     "Storage_Screen_Duration": 5,
     
-    "Show_Network_Screen": true,
+    "Show_Network_Screen": false,
     "Network_Screen_Limit": null,
     "Network_Screen_Duration": 5,
     
@@ -36,5 +36,10 @@
     "Static_Screen_Limit": null,
     "Static_Screen_Duration": 5,
     "Static_Screen_Text": "Hassio verion {hassio.os.version} on {hostname} with IP {ip}",
-    "static_Screen_Text_NoScroll": false
+    "static_Screen_Text_NoScroll": false,
+
+    "Show_Watchlogstate_Screen": true,
+    "WatchLogState_Screen_Limit": null,
+    "WatchLogState_Screen_Duration": 5
+
 }
